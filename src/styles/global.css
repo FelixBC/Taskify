@@ -1,0 +1,13 @@
+.header__title {
+  font: 1em sans-serif;
+  display: flex;
+  width: 90%;
+  position: relative;
+  align-items: center;
+}
+
+.inputField__box {
+  width: 100%;
+  border-radius: 50px
+}
+
