@@ -1,9 +1,9 @@
 type HeaderProps = {
-  children: String; 
-  className: string;
+  children: React.ReactNode; 
+  className?: string;
 };
-const Header = ({ children, ...props}: HeaderProps) => {
-  return <h1 {...props}>{children}</h1>;
+const Header = ({ children, className}: HeaderProps) => {
+  return <h1 className={className}>{children}</h1>;
 };
 
 export default Header;

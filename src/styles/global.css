@@ -1,13 +1,30 @@
-.header__title {
-  font: 1em sans-serif;
-  display: flex;
-  width: 90%;
-  position: relative;
-  align-items: center;
+/* 1. Box-sizing: so width/height include padding and border */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.inputField__box {
-  width: 100%;
-  border-radius: 50px
+/* 2. Variables: use these in App.css and components */
+:root {
+  --color-bg: #2f74c0;
+  --color-text: #000;
+  --font-main: "Neucha", cursive;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --radius: 8px;
 }
 
+/* 3. Page and body defaults */
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  color: var(--color-text);
+  min-height: 100%;
+}

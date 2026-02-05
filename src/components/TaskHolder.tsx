@@ -7,7 +7,7 @@ type TodosProps = {
 };
 
 
-
+// set todos in case we add delete here etc.
 const TaskHolder: React.FC<TodosProps> = ({ todos, setTodos }) => {
   return (
     <div className="todos">
