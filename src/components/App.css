@@ -1,12 +1,30 @@
 .app {
-  width: 50vw;
+  width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #2f74c0;
   font-family: "Neucha", cursive;
 }
 
+.app__column--left {
+  padding-top: 15em;
+  width: 50%;
+}
+
+.app__column--right {
+  padding-top: 15em;
+  width: 50%;
+  background-color: #60686c;
+}
+
+.add-task__main-content {
+  position: absolute;
+  left: 30%;
+  right: 30%;
+}
+.app__panel {
+}
 .heading {
   text-transform: uppercase;
   font-size: 40px;
@@ -14,10 +32,15 @@
   z-index: 1;
   text-align: center;
 }
-@media(max-witdth:800px){
-    .heading{
-        margin: 15px 0;
-        font-size: 35px;
-    }
+@media (max-witdth: 800px) {
+  .heading {
+    margin: 15px 0;
+    font-size: 35px;
+  }
 }
 
+.main-content__title-input {
+  margin: 5em;
+  position: absolute;
+  display: contents;
+}

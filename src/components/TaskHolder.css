@@ -1,18 +1,17 @@
 .task__list {
   padding: 2em;
   display: block;
-  background-color: azure;
+  background: rgba(1, 1, 1, 0.2);
   margin: 1em;
   border-radius: 25px;
 }
 
-.task__item {
+.task__item--undone {
   margin: 1em;
   padding: 1em;
   background-color: yellow;
   border-radius: 25px;
 }
 
-.task__item--undone{
-    align-content: center;
+.task__item--done {
 }

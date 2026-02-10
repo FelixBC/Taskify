@@ -1,14 +1,26 @@
-.card {
+.add-task-form {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
   padding: var(--spacing-md);
   border-radius: var(--radius);
+  position: relative;
 }
 
-.card__input {
+.add-task-form__input {
   flex: 1;
   border-radius: var(--radius);
   border: 1px;
   padding: 1rem;
 }
+.add-task-form__button {
+  font-size: large;
+  font-style: italic;
+  border-radius: 50%;
+  height: 70%;
+  aspect-ratio: 1;
+  position: absolute;
+  right: 1%;
+  top: 15%;
+}
+

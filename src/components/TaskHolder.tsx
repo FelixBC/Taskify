@@ -11,16 +11,15 @@ type TodosProps = {
 const TaskHolder: React.FC<TodosProps> = ({ todos, setTodos }) => {
   return (
     <div>
-
-<Header className="heading">Undone Tasks</Header>
-    <ol className="task__list">
-      {todos.map((todo) => (
-        <li key={todo.id} className="task__item">
-          {todo.todo}
-        </li>
-      ))}
-    </ol>
-</div>
+      <Header className="heading">Undone Tasks</Header>
+      <ol className="task__list">
+        {todos.map((todo) => (
+          <li key={todo.id} className="task__item--undone">
+            {todo.todo}
+          </li>
+        ))}
+      </ol>
+    </div>
   );
 };
 
