@@ -1,0 +1,12 @@
+.card {
+  margin: 3em;
+  display: block;
+}
+
+.card__list {
+  padding: 5em; 
+  margin: 2em;
+  background-color: yellow;
+  border-radius: 25px;
+  text-align: left;
+}

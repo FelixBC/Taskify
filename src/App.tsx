@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import AddTaskInput from "./components/AddTaskInput";
 import "./styles/global.css";
+import "./components/App.css"
 import { useState } from "react";
 import type { SubmitEvent } from "react";
 import type { Todo } from "./components/model";
@@ -20,7 +21,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="app">
       <Header className="heading">Taskify</Header>
       <AddTaskInput todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       <TaskHolder todos={todos} setTodos={setTodos} />

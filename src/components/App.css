@@ -1,9 +1,8 @@
-.App {
-  width: 100vw;
+.app {
+  width: 50vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column-reverse;
   background-color: #2f74c0;
   font-family: "Neucha", cursive;
 }
