@@ -2,7 +2,7 @@
   width: 50vw;
   height: 100vh;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   background-color: #2f74c0;
   font-family: "Neucha", cursive;
 }

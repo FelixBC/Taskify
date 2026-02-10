@@ -1,12 +1,18 @@
-.card {
-  margin: 3em;
+.task__list {
+  padding: 2em;
   display: block;
+  background-color: azure;
+  margin: 1em;
+  border-radius: 25px;
 }
 
-.card__list {
-  padding: 5em; 
-  margin: 2em;
+.task__item {
+  margin: 1em;
+  padding: 1em;
   background-color: yellow;
   border-radius: 25px;
-  text-align: left;
+}
+
+.task__item--undone{
+    align-content: center;
 }
