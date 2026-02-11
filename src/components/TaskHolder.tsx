@@ -2,6 +2,8 @@ import React from "react";
 import type { Todo } from "./model";
 import "./TaskHolder.css";
 import Header from "./Header";
+import { FaCheck } from "react-icons/fa";
+
 type TodosProps = {
   todos: Todo[];
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
