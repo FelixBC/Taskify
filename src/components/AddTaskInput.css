@@ -17,10 +17,11 @@
   font-size: large;
   font-style: italic;
   border-radius: 50%;
-  height: 70%;
+  height: 65%;
   aspect-ratio: 1;
   position: absolute;
-  right: 1%;
-  top: 15%;
+  right: 3%;
+  top: 18%;
+  
 }
 
