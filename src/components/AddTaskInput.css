@@ -14,14 +14,13 @@
   padding: 1rem;
 }
 .add-task-form__button {
-  font-size: large;
   font-style: italic;
   border-radius: 50%;
-  height: 65%;
+  height: 50%;
   aspect-ratio: 1;
   position: absolute;
-  right: 3%;
-  top: 18%;
+  right: 5%;
+  top: 25%;
   
 }
 
