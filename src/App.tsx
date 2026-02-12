@@ -27,6 +27,7 @@ function App() {
         <AddTaskInput todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       </div>
       <div className="app__column--left">
+        <Header className="heading">Undone Tasks</Header>
         {todos.length > 0 && <TaskHolder todos={todos} setTodos={setTodos} />}
       </div>
       <div className="app__column--right">
