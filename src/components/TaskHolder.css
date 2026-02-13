@@ -1,16 +1,21 @@
 .task__list {
   padding: 2em;
-  display: block;
   background: rgba(1, 1, 1, 0.2);
   margin: 1em;
   border-radius: 25px;
 }
 
 .task__item--undone {
+  display: flex;
   margin: 1em;
   padding: 1em;
   background-color: yellow;
   border-radius: 25px;
+}
+.task__item-button--undone {
+  display: flex;
+  margin-left: auto;
+   
 }
 
 .task__item--done {
