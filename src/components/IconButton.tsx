@@ -1,12 +1,9 @@
 import type React from "react";
-type IconProps = {
-  size?: number;
-};
 type IconButtonProps = {
   className?: string;
   icon: React.ReactNode;
-  iconProps?: IconProps;
-  onDone: (id: number) => void;
+  iconProps?: { size: number };
+  onClick: () => void;
 };
 
 // my goal is to make this component ICON reusable with the button on click function.
@@ -15,12 +12,12 @@ type IconButtonProps = {
 const IconButton: React.FC<IconButtonProps> = ({
   icon,
   iconProps,
-  onDone: onDone,
+  onClick: onDone,
   ...props
 }) => {
   return (
     <div>
-      <button type="button" onClick={() => onDone} {...props}>
+      <button type="button" onClick={onDone} {...props}>
         {icon}
       </button>
     </div>

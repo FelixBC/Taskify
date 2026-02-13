@@ -36,7 +36,7 @@ const TaskHolder: React.FC<TodosProps> = ({ todos, setTodos }) => {
               <IconButton
                 className="task__list-icon-check"
                 icon={iconCheck}
-                onDone={handleDone}
+                onClick={() => handleDone(todo.id)}
                 iconProps={{
                   size: 20,
                 }}
@@ -45,7 +45,7 @@ const TaskHolder: React.FC<TodosProps> = ({ todos, setTodos }) => {
               <IconButton
                 className="task__list-icon-delete"
                 icon={iconDelete}
-                onDone={handleDelete}
+                onClick={() => handleDelete(todo.id)}
                 iconProps={{
                   size: 20,
                 }}
