@@ -15,7 +15,7 @@ function App() {
     e.preventDefault();
     if (todo) {
       //Mutation rule: Do not mutate arrays, or objects.
-      setTodos([...todos, { id: Date.now(), todo, isDone: false }]);
+      setTodos((prev) => [...prev, { id: Date.now(), todo, isDone: false }]);
       setTodo("");
     }
   };

@@ -13,19 +13,21 @@ type TodosProps = {
 const TaskHolder: React.FC<TodosProps> = ({ todos, setTodos }) => {
   const iconCheck = <FaCheck />;
   const iconDelete = <FaTrash />;
+
   const handleDone = (id: number) => {
     setTodos((prevTodos) =>
       prevTodos.map((todo) =>
         todo.id === id ? { ...todo, isDone: true } : todo,
       ),
     );
-    console.log(todos);
   };
-  //this needs more thought... but it could work. problably there is a better way, just did the one that was easier reusing existing code..
+
+  //filt
   const handleDelete = (id: number) => {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
     console.log(todos);
   };
+
   return (
     <div>
       <ol className="task__list">

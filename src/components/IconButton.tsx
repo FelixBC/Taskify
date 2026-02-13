@@ -12,12 +12,12 @@ type IconButtonProps = {
 const IconButton: React.FC<IconButtonProps> = ({
   icon,
   iconProps,
-  onClick: onDone,
+  onClick,
   ...props
 }) => {
   return (
     <div>
-      <button type="button" onClick={onDone} {...props}>
+      <button type="button" onClick={onClick} {...props}>
         {icon}
       </button>
     </div>
