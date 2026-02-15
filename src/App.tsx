@@ -20,6 +20,8 @@ function App() {
     }
   };
 
+const hasValue:boolean = todos.length > 0;
+
   return (
     <div className="app">
       <div className="add-task__main-content">
@@ -28,10 +30,11 @@ function App() {
       </div>
       <div className="app__column--left">
         <Header className="heading">Undone Tasks</Header>
-        {todos.length > 0 && <TaskHolder todos={todos} setTodos={setTodos} />}
+        {hasValue && <TaskHolder todos={todos} setTodos={setTodos} />}
       </div>
       <div className="app__column--right">
         <Header className="heading">Done Tasks</Header>
+        {hasValue && <TaskHolder todos={todos} setTodos={setTodos}  />}
       </div>
     </div>
   );
