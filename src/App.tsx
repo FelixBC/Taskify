@@ -20,7 +20,9 @@ function App() {
     }
   };
 
-const hasValue:boolean = todos.length > 0;
+  const hasValue: boolean = todos.length > 0;
+  const doneTodos: Todo[] = todos.filter((prevTodos) => prevTodos.isDone===true)
+  const unDoneTodos: Todo[] = todos.filter((prevTodos) => prevTodos.isDone===false)
 
   return (
     <div className="app">
@@ -28,13 +30,19 @@ const hasValue:boolean = todos.length > 0;
         <Header className="heading">Taskify</Header>
         <AddTaskInput todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       </div>
+
       <div className="app__column--left">
         <Header className="heading">Undone Tasks</Header>
-        {hasValue && <TaskHolder todos={todos} setTodos={setTodos} />}
+        {hasValue && <TaskHolder todos={unDoneTodos} setTodos={setTodos} />}
       </div>
       <div className="app__column--right">
         <Header className="heading">Done Tasks</Header>
-        {hasValue && <TaskHolder todos={todos} setTodos={setTodos}  />}
+        {hasValue && (
+          <TaskHolder
+            todos={doneTodos}
+            setTodos={setTodos}
+          />
+        )}
       </div>
     </div>
   );
