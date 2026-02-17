@@ -20,9 +20,20 @@ function App() {
     }
   };
 
-  const hasValue: boolean = todos.length > 0;
-  const doneTodos: Todo[] = todos.filter((prevTodos) => prevTodos.isDone===true)
-  const unDoneTodos: Todo[] = todos.filter((prevTodos) => prevTodos.isDone===false)
+
+  const hasDoneTask: boolean =
+    todos.filter((prevTodos) => prevTodos.isDone === true).length > 0;
+
+  const hasUnDoneTask: boolean =
+    todos.filter((prevTodos) => prevTodos.isDone === false).length > 0;
+
+
+  const doneTodos: Todo[] = todos.filter(
+    (prevTodos) => prevTodos.isDone === true,
+  );
+  const unDoneTodos: Todo[] = todos.filter(
+    (prevTodos) => prevTodos.isDone === false,
+  );
 
   return (
     <div className="app">
@@ -33,16 +44,13 @@ function App() {
 
       <div className="app__column--left">
         <Header className="heading">Undone Tasks</Header>
-        {hasValue && <TaskHolder todos={unDoneTodos} setTodos={setTodos} />}
+        {hasUnDoneTask && (
+          <TaskHolder todos={unDoneTodos} setTodos={setTodos} />
+        )}
       </div>
       <div className="app__column--right">
         <Header className="heading">Done Tasks</Header>
-        {hasValue && (
-          <TaskHolder
-            todos={doneTodos}
-            setTodos={setTodos}
-          />
-        )}
+        { hasDoneTask && <TaskHolder todos={doneTodos} setTodos={setTodos} />}
       </div>
     </div>
   );
