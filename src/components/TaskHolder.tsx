@@ -2,7 +2,7 @@ import React from "react";
 import type { Todo } from "./model";
 import "./TaskHolder.css";
 import IconButton from "./IconButton";
-import { FaCheck, FaTrash } from "react-icons/fa";
+import { FaCheck, FaTrash, FaUndo } from "react-icons/fa";
 
 type TodosProps = {
   todos: Todo[];
@@ -13,6 +13,7 @@ type TodosProps = {
 const TaskHolder: React.FC<TodosProps> = ({ todos, setTodos }) => {
   const iconCheck = <FaCheck />;
   const iconDelete = <FaTrash />;
+  const iconUndone = <FaUndo />;
 
   const handleDone = (id: number) => {
     setTodos((prevTodos) =>
@@ -26,6 +27,14 @@ const TaskHolder: React.FC<TodosProps> = ({ todos, setTodos }) => {
   const handleDelete = (id: number) => {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
     console.log(todos);
+  };
+
+  const handleUndone = (id: number) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === id ? { ...todo, isDone: false } : todo,
+      ),
+    );
   };
 
   return (
@@ -48,6 +57,15 @@ const TaskHolder: React.FC<TodosProps> = ({ todos, setTodos }) => {
                 className="task__list-icon-delete"
                 icon={iconDelete}
                 onClick={() => handleDelete(todo.id)}
+                iconProps={{
+                  size: 20,
+                }}
+              />
+
+              <IconButton
+                className="task__list-icon-undone"
+                icon={iconUndone}
+                onClick={() => handleUndone(todo.id)}
                 iconProps={{
                   size: 20,
                 }}
