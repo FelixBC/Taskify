@@ -38,18 +38,18 @@ function App() {
   return (
     <div className="app">
       <div className="add-task__main-content">
-        <Header className="heading">Taskify</Header>
+        <Header className="app__main-header">Taskify</Header>
         <AddTaskInput todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       </div>
 
       <div className="app__column--left">
-        <Header className="heading">Undone Tasks</Header>
+        <Header className="app__main-header">Undone Tasks</Header>
         {hasUnDoneTask && (
           <TaskHolder todos={unDoneTodos} setTodos={setTodos} />
         )}
       </div>
       <div className="app__column--right">
-        <Header className="heading">Done Tasks</Header>
+        <Header className="app__main-header">Done Tasks</Header>
         { hasDoneTask && <TaskHolder todos={doneTodos} setTodos={setTodos} />}
       </div>
     </div>
